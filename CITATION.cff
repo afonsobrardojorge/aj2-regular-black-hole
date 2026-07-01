@@ -1,0 +1,36 @@
+# Changelog
+
+## v0.3.4 clean release
+
+- Removed the residual `scripts/__pycache__/aj2_utils.cpython-313.pyc` file found in the v0.3.3 ZIP.
+- Confirmed that `paper/tmp.tex` is absent.
+- Regenerated `SHA256SUMS.txt`.
+- Updated release metadata to v0.3.4.
+- This is a packaging/reproducibility cleanup only; no new physics claims are added.
+
+## v0.3.3 clean release
+
+- Fixed abstract punctuation around the geometrized-unit statement.
+- Clarified that \(\alpha=0.296\) in the QNM table is \(0.999\alpha_c\), close to but below extremality.
+- Added an explicit caution that \(\ell_s=0\) and higher-overtone first-order WKB rows are reproducibility diagnostics, not precision QNM estimates.
+- Added limited-range and symmetric-log heat-capacity figures to clarify the sign change at \(x=4\).
+- Removed stale cache files and regenerated release checksums.
+
+## v0.3.1 clean release — 2026-05-24
+
+This is an editorial and reproducibility cleanup of the v0.3.0 release candidate.
+
+### Fixed
+
+- Aligned `CITATION.cff` license with `LICENSE`: both now use CC BY 4.0.
+- Removed the empty DOI field from `CITATION.cff`. DOI remains pending until Zenodo release.
+- Removed `scripts/__pycache__/` from the release package.
+- Confirmed that the packaged scalar-QNM script produces the packaged scalar-QNM table.
+- Updated the main paper to explicitly point to the accompanying first-pass WKB table.
+- Added a short representative QNM table to the main paper.
+- Added `REPRODUCIBILITY.md`.
+- Updated README commands for running the package from a clean environment.
+
+### Scientific status
+
+No new physics is claimed in this release. AJ-2 remains an effective regular black-hole model. The open critical tasks remain: AJ-3 action derivation, robust QNMs, full axial/polar stability, rotation, dynamical formation/evaporation, observational constraints, and external review.

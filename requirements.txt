@@ -1,0 +1,65 @@
+# Reproducibility guide
+
+This package is designed so that the figures and first-pass WKB tables can be regenerated from the scripts.
+
+## Environment
+
+Tested with Python 3.11+.
+
+Install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Regenerate figures
+
+```bash
+python scripts/generate_all_figures.py
+```
+
+This writes figures into `figures/`.
+
+## Regenerate the first-pass scalar-QNM table
+
+```bash
+python scripts/compute_scalar_qnm_first_order_wkb.py
+```
+
+This writes:
+
+```text
+tables/scalar_qnm_first_order_wkb.csv
+```
+
+## Important scientific caveat
+
+The scalar-QNM table uses first-order WKB at the maximum of the scalar test-field potential. It is a preliminary diagnostic. It is not a replacement for higher-order WKB, shooting, continued fractions, or time-domain evolution.
+
+## Expected outputs
+
+The QNM CSV should contain rows for:
+
+```text
+alpha = 0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.999*(8/27)
+ell_s = 0, 1, 2, 3
+n = 0, 1, 2
+```
+
+with columns:
+
+```text
+alpha, ell_s, n, r_peak/M, V0, V2_tortoise, Re_omega_M, Minus_Im_omega_M, method
+```
+
+## Run algebraic validation checks
+
+```bash
+python scripts/verify_curvature_invariants.py
+python scripts/derive_isco_polynomial.py
+python scripts/derive_energy_conditions.py
+```
+
+Expected result: each script exits with code `0`; the curvature and ISCO scripts print explicit `PASS` messages.

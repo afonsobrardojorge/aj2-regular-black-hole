@@ -1,0 +1,111 @@
+# AJ-2 / Buinheira--Sal Jorge regular black-hole model
+
+**Release:** v0.3.4 clean release  
+**Status:** technical development package. Not peer reviewed.  
+**Scientific positioning:** AJ-2 is an effective regular black-hole model, not a complete physical theory.
+
+This package consolidates the AJ-2 effective sector, mathematical appendices, a first-pass scalar-QNM WKB pipeline, and the AJ-3 development program.
+
+## Core model
+
+In geometrized units \(G=c=1\),
+
+\[
+m(r)=M\left(\frac{r}{r+a}\right)^3,
+\qquad
+a^3=2M\ell^2,
+\]
+
+\[
+f(r)=1-\frac{2Mr^2}{(r+a)^3}.
+\]
+
+The model has a finite de Sitter-like core, satisfies the weak and dominant energy conditions for the effective anisotropic source, violates the strong energy condition in the core, and admits an extremal cold-remnant branch.
+
+## What this package does and does not claim
+
+It **does** provide a controlled effective static sector, mathematical derivations, reproducible plots, and a first-pass scalar-QNM diagnostic.
+
+It **does not** prove that AJ is a complete theory of quantum gravity, that AJ-2 is dynamically formed in collapse, that the model is fully gravitationally stable, or that the NED reconstruction is a global microscopic completion.
+
+
+## v0.3.4 editorial notes
+
+This release adds three clarifications requested before external circulation:
+
+- \(\alpha=0.296\) in QNM tables denotes \(0.999\alpha_c\), close to but below the extremal endpoint.
+- First-order WKB rows with \(\ell_s=0\) or higher overtones are reproducibility diagnostics, not precision QNM estimates.
+- Heat-capacity plots now include limited-range and symmetric-log views to make the sign change at \(x=4\) clearer.
+
+## Directory structure
+
+```text
+paper/
+  AJ2_main_v0.3.4.md
+  AJ2_main_v0.3.4.pdf
+
+appendices/
+  AJ2_Mathematical_Appendices_v0.2.0.md
+  AJ2_Mathematical_Appendices_v0.2.0.pdf
+
+notes/
+  AJ3_Dynamical_Origin_v0.2.0.md
+  AJ3_Dynamical_Origin_v0.2.0.pdf
+  DEVELOPMENT_CHECKLIST_v0.3.4.md
+
+scripts/
+  aj2_utils.py
+  compute_horizons.py
+  compute_thermodynamics.py
+  compute_photon_isco_shadow.py
+  compute_scalar_qnm_first_order_wkb.py
+  generate_all_figures.py
+
+figures/
+  generated figures
+
+tables/
+  scalar_qnm_first_order_wkb.csv
+
+requirements.txt
+references.bib
+CITATION.cff
+LICENSE
+CHANGELOG.md
+REPRODUCIBILITY.md
+```
+
+## Reproduce figures and tables
+
+From the package root:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+python scripts/generate_all_figures.py
+python scripts/compute_scalar_qnm_first_order_wkb.py
+```
+
+The WKB scalar-QNM results are a first diagnostic only. They should be replaced or checked against higher-order WKB, shooting, continued fractions, or time-domain evolution before being used as robust QNM predictions.
+
+## License
+
+Text, figures and tables are released under CC BY 4.0 unless otherwise stated. Cite the release metadata in `CITATION.cff`.
+
+## DOI
+
+DOI pending. Once a Zenodo release is created, update `CITATION.cff` with the versioned DOI.
+
+## Additional validation scripts in v0.3.4
+
+This release adds lightweight symbolic validation scripts:
+
+```bash
+python scripts/verify_curvature_invariants.py
+python scripts/derive_isco_polynomial.py
+python scripts/derive_energy_conditions.py
+```
+
+These scripts print `PASS` where an algebraic check is successful. They are not substitutes for external review, but they improve reproducibility of the analytic derivations.

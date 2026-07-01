@@ -1,0 +1,328 @@
+---
+title: "AJ-3: Dynamical Origin of the Saturating Core"
+subtitle: "v0.2.0 development note"
+author: "Afonso Brardo Buinheira Sal Jorge"
+date: "2026-05-24"
+geometry: margin=1in
+fontsize: 11pt
+---
+
+> **Status.** This note defines the dynamical problem that must be solved for the Buinheira--Sal Jorge / AJ framework to move beyond an effective static model.
+
+# 1. The real AJ-3 problem
+
+AJ-2 uses
+
+\[
+m(r)=M\left(\frac{r}{r+a}\right)^3,
+\qquad
+a^3=2M\ell^2.
+\]
+
+This works as an effective model, but \(m(r)\) is imposed phenomenologically. The AJ-3 problem is to derive the saturating core from a covariant action.
+
+The decisive density profile is
+
+\[
+\rho(r)=\frac{3}{8\pi\ell^2}
+\left(\frac{a}{r+a}\right)^4.
+\]
+
+If this density is generated dynamically, then
+
+\[
+M=4\pi\int_0^\infty \rho(r)r^2dr
+=
+\frac{a^3}{2\ell^2},
+\]
+
+so
+
+\[
+a^3=2M\ell^2.
+\]
+
+Thus the scale relation follows from normalization once the density profile and central saturation scale are dynamically obtained.
+
+# 2. What a successful action may and may not contain
+
+The action may contain the fundamental scale
+
+\[
+\ell
+\]
+
+and dimensionless couplings.
+
+It must not contain \(M\) or \(a\) as Lagrangian parameters. \(M\) must arise as an integration constant or charge of the solution. \(a\) must arise from \(M\) and \(\ell\).
+
+A successful AJ-3 action must produce
+
+\[
+S_{\rm AJ3}[g,\Phi_i;\ell]
+\Longrightarrow
+m(r;M,\ell)\simeq
+M\left(\frac{r}{r+a(M,\ell)}\right)^3,
+\]
+
+or a controlled deformation of it.
+
+# 3. Candidate action class
+
+The most conservative candidate that can escape the one-invariant magnetic-NED obstruction is
+
+\[
+S_{\rm AJ3}
+=
+\int d^4x\sqrt{-g}
+\left[
+\frac{R}{16\pi}
+-\frac{1}{4\pi}\mathcal L(F,G,\chi;\ell)
+-\frac12K(\chi)(\nabla\chi)^2
+-U(\chi;\ell)
+\right].
+\]
+
+Here
+
+\[
+F=\frac14F_{\mu\nu}F^{\mu\nu},
+\]
+
+\[
+G=\frac14F_{\mu\nu}{}^\star F^{\mu\nu},
+\]
+
+and \(\chi\) is an auxiliary saturation field. The field \(\chi\) is not assumed to be canonical in the final theory; it is included as a minimal way to introduce a tunable saturation sector.
+
+# 4. Field equations
+
+Variation with respect to the metric gives
+
+\[
+G_{\mu\nu}=8\pi
+\left(
+T^{\rm NED}_{\mu\nu}+T^{\chi}_{\mu\nu}
+\right).
+\]
+
+With the conventions above,
+
+\[
+T^{\rm NED}_{\mu\nu}
+=
+\frac{1}{4\pi}
+\left[
+\mathcal L_F F_{\mu\alpha}F_\nu{}^\alpha
++
+\mathcal L_G F_{\mu\alpha}{}^\star F_\nu{}^\alpha
+-
+g_{\mu\nu}\mathcal L
+\right],
+\]
+
+and
+
+\[
+T^\chi_{\mu\nu}
+=
+K(\chi)\left[
+\nabla_\mu\chi\nabla_\nu\chi
+-\frac12 g_{\mu\nu}(\nabla\chi)^2
+\right]
+-g_{\mu\nu}U(\chi;\ell).
+\]
+
+Variation with respect to \(A_\mu\) gives the generalized NED equation
+
+\[
+\nabla_\mu
+\left(
+\mathcal L_F F^{\mu\nu}
++
+\mathcal L_G {}^\star F^{\mu\nu}
+\right)=0.
+\]
+
+The Bianchi identity is
+
+\[
+\nabla_\mu{}^\star F^{\mu\nu}=0.
+\]
+
+Variation with respect to \(\chi\) gives
+
+\[
+K(\chi)\Box\chi
++
+\frac12K_\chi(\chi)(\nabla\chi)^2
+-
+U_\chi(\chi;\ell)
+-
+\frac{1}{4\pi}\mathcal L_\chi(F,G,\chi;\ell)
+=0.
+\]
+
+These are the equations that must be solved or shown to fail.
+
+# 5. Static spherical ansatz
+
+Use
+
+\[
+ds^2=-f(r)dt^2+\frac{dr^2}{f(r)}+r^2d\Omega^2,
+\]
+
+with magnetic sector
+
+\[
+F_{\theta\phi}=q\sin\theta,
+\]
+
+so
+
+\[
+F=\frac{q^2}{2r^4},
+\qquad
+G=0,
+\qquad
+\chi=\chi(r).
+\]
+
+The target is to obtain
+
+\[
+\rho(r)=\frac{3}{8\pi\ell^2}
+\left(\frac{a}{r+a}\right)^4
+\]
+
+without inserting \(a\) in \(\mathcal L\), \(K\), or \(U\).
+
+# 6. Why a canonical scalar alone is not enough
+
+For a canonical radial scalar,
+
+\[
+T_{\mu\nu}^{\phi}
+=
+\nabla_\mu\phi\nabla_\nu\phi
+-
+g_{\mu\nu}
+\left[
+\frac12(\nabla\phi)^2+V(\phi)
+\right].
+\]
+
+For a static radial configuration,
+
+\[
+\rho+p_r
+\propto
+f(r)\phi'(r)^2.
+\]
+
+AJ-2 requires
+
+\[
+\rho+p_r=0
+\]
+
+throughout the exterior. Unless \(f=0\), this implies \(\phi'=0\). Therefore a single canonical scalar cannot generate the AJ-2 radial profile while preserving \(g_{tt}g_{rr}=-1\).
+
+Possible alternatives include k-essence, constrained scalar fields, auxiliary fields, non-minimal couplings, two-invariant NED, limiting-curvature gravity or an explicitly semiclassical effective stress tensor.
+
+# 7. Escape from the one-invariant NED obstruction
+
+The AJ-NED obstruction assumes
+
+\[
+\mathcal L=\mathcal L(F).
+\]
+
+A theory of the form
+
+\[
+\mathcal L=\mathcal L(F,G,\chi)
+\]
+
+is not covered by that proof. A useful starting deformation is
+
+\[
+\mathcal L(F,G,\chi)
+=
+\mathcal L_{\rm AJ2}(F,\chi)
++
+\frac12\eta(F,\chi)G^2.
+\]
+
+On the magnetic background \(G=0\), the metric can remain close to the AJ-2 background. Perturbations, however, depend on \(\mathcal L_{GG}\), \(\mathcal L_{FG}\) and the \(\chi\) sector. This may alter the effective cones and avoid the global degeneracy of the one-invariant model.
+
+# 8. Hyperbolicity target
+
+A candidate AJ-3 theory must have a well-posed exterior perturbation problem. At minimum, the principal symbol for perturbations must be Lorentzian and non-degenerate outside the outer horizon.
+
+For the black-hole branch,
+
+\[
+r\ge r_+.
+\]
+
+The target condition is
+
+\[
+\mathcal G_{\rm eff}^{\mu\nu}
+\quad
+\text{Lorentzian and non-degenerate for } r\ge r_+.
+\]
+
+The theory must also avoid exterior ghost and gradient instabilities.
+
+# 9. Immediate calculation
+
+The next calculation is not another narrative section. It is:
+
+1. choose explicit functions \(\mathcal L(F,G,\chi;\ell)\), \(K(\chi)\), and \(U(\chi;\ell)\);
+2. derive the static spherical field equations;
+3. solve or asymptotically match them;
+4. test whether
+
+\[
+\rho(r)=\frac{3}{8\pi\ell^2}
+\left(\frac{a}{r+a}\right)^4
+\]
+
+or a nearby controlled profile emerges;
+5. verify that \(a^3=C M\ell^2\) arises from the solution.
+
+If \(C=2\), AJ-2 is recovered exactly. If \(C\neq2\), the theory may still generate an AJ-like model. If no such profile arises, the proposed action class fails and AJ-3 must move to another mechanism.
+
+# 10. Alternative AJ-3 routes
+
+If the \(F,G,\chi\) route fails, viable alternatives are:
+
+1. limiting-curvature gravity;
+2. non-minimal curvature--field couplings;
+3. k-essence or constrained scalar fields;
+4. semiclassical effective stress tensors;
+5. nonlocal gravity-inspired profiles;
+6. loop-inspired effective interiors;
+7. asymptotic-safety-inspired running couplings.
+
+# 11. Required deliverables
+
+A convincing AJ-3 paper must include:
+
+1. the explicit action;
+2. field equations;
+3. static spherical reduction;
+4. derivation of the density profile or explanation of the deviation;
+5. proof that \(M\) is an integration constant;
+6. derivation of \(a^3=C M\ell^2\);
+7. exterior hyperbolicity;
+8. perturbation equations;
+9. comparison with AJ-2, Hayward and Bardeen;
+10. limitations.
+
+# 12. Development status
+
+AJ-3 is currently a well-defined research problem, not a completed theory. Its value is that it identifies the exact missing step in the Buinheira--Sal Jorge / AJ program: generating the saturating geometric-vacuum core from an action without imposing the AJ-2 mass profile by hand.

@@ -1,0 +1,568 @@
+---
+title: "AJ-2 Mathematical Appendices"
+subtitle: "v0.2.0 technical derivations"
+author: "Afonso Brardo Buinheira Sal Jorge"
+date: "2026-05-24"
+geometry: margin=1in
+fontsize: 11pt
+---
+
+> **Status.** These appendices collect derivations for the AJ-2 effective model. They do not prove that AJ-2 is a fundamental theory.
+
+# A. Mass function and density
+
+AJ-2 is defined by
+
+\[
+m(r)=M\left(\frac{r}{r+a}\right)^3.
+\]
+
+Differentiating,
+
+\[
+m'(r)
+=
+M\frac{3r^2(r+a)^3-r^3\,3(r+a)^2}{(r+a)^6}
+=
+\frac{3Ma r^2}{(r+a)^4}.
+\]
+
+For
+
+\[
+f(r)=1-\frac{2m(r)}{r},
+\]
+
+the effective density is
+
+\[
+\rho(r)=\frac{m'(r)}{4\pi r^2},
+\]
+
+so
+
+\[
+\rho(r)=\frac{3Ma}{4\pi(r+a)^4}.
+\]
+
+With \(a^3=2M\ell^2\),
+
+\[
+\rho(0)=\frac{3M}{4\pi a^3}
+=\frac{3}{8\pi\ell^2}.
+\]
+
+# B. Pressures
+
+For the metric class \(g_{tt}g_{rr}=-1\), the radial pressure obeys
+
+\[
+p_r=-\rho.
+\]
+
+The conservation equation for an anisotropic fluid gives
+
+\[
+p_t=-\rho-\frac{r}{2}\rho'(r).
+\]
+
+Since
+
+\[
+\rho'(r)=-\frac{12Ma}{4\pi(r+a)^5},
+\]
+
+we obtain
+
+\[
+p_t(r)=
+-\frac{3Ma}{4\pi(r+a)^4}
++
+\frac{6Mar}{4\pi(r+a)^5}.
+\]
+
+Therefore
+
+\[
+p_t(r)
+=
+\frac{3Ma}{4\pi(r+a)^4}
+\frac{r-a}{r+a}
+=
+\rho(r)\frac{r-a}{r+a}.
+\]
+
+# C. Energy conditions
+
+The weak energy condition is
+
+\[
+\rho\ge0,\qquad \rho+p_r\ge0,\qquad \rho+p_t\ge0.
+\]
+
+For AJ-2,
+
+\[
+\rho>0,\qquad \rho+p_r=0,
+\]
+
+and
+
+\[
+\rho+p_t
+=
+\rho\left(1+\frac{r-a}{r+a}\right)
+=
+\rho\frac{2r}{r+a}\ge0.
+\]
+
+Thus WEC holds.
+
+The dominant energy condition is
+
+\[
+|p_i|\le \rho.
+\]
+
+AJ-2 has
+
+\[
+|p_r|=\rho,
+\]
+
+and
+
+\[
+\left|\frac{p_t}{\rho}\right|
+=
+\left|\frac{r-a}{r+a}\right|\le1.
+\]
+
+Thus DEC holds.
+
+The strong energy condition contains
+
+\[
+\rho+p_r+2p_t=2p_t.
+\]
+
+Since
+
+\[
+p_t<0 \quad (r<a),
+\]
+
+SEC fails in the core.
+
+# D. Curvature invariants
+
+For AJ-2,
+
+\[
+f(r)=1-\frac{2Mr^2}{(r+a)^3}.
+\]
+
+The Ricci scalar is
+
+\[
+R(r)=
+\frac{24Ma^2}{(r+a)^5}.
+\]
+
+Using \(a^3=2M\ell^2\),
+
+\[
+R(0)=\frac{24M}{a^3}=\frac{12}{\ell^2}.
+\]
+
+The Ricci-square invariant is
+
+\[
+R_{\mu\nu}R^{\mu\nu}=
+\frac{144M^2a^2(r^2+a^2)}{(r+a)^{10}},
+\]
+
+and the Kretschmann scalar is
+
+\[
+K(r)=
+\frac{16M^2(3r^4-6ar^3+21a^2r^2+6a^4)}
+{(r+a)^{10}}.
+\]
+
+At \(r=0\),
+
+\[
+R_{\mu\nu}R^{\mu\nu}(0)=\frac{144M^2}{a^6}
+=
+\frac{36}{\ell^4},
+\]
+
+and
+
+\[
+K(0)=\frac{96M^2}{a^6}
+=
+\frac{24}{\ell^4}.
+\]
+
+All scalar invariants are finite at the origin.
+
+# E. Horizons and critical mass
+
+Horizons satisfy
+
+\[
+f(r)=0.
+\]
+
+Thus
+
+\[
+1-\frac{2Mr^2}{(r+a)^3}=0,
+\]
+
+or
+
+\[
+(r+a)^3=2Mr^2.
+\]
+
+Let
+
+\[
+x=\frac{r}{a},\qquad \mu=\frac{2M}{a}.
+\]
+
+Then
+
+\[
+(x+1)^3=\mu x^2.
+\]
+
+Equivalently,
+
+\[
+\mu(x)=\frac{(x+1)^3}{x^2}.
+\]
+
+Differentiating,
+
+\[
+\mu'(x)=\frac{(x+1)^2(x-2)}{x^3}.
+\]
+
+The minimum occurs at
+
+\[
+x=2,
+\]
+
+with
+
+\[
+\mu_c=\frac{27}{4}.
+\]
+
+Since \(\mu=2M/a\), the extremal branch satisfies
+
+\[
+\frac{2M}{a}=\frac{27}{4}
+\quad\Rightarrow\quad
+\frac{a}{M}=\frac{8}{27}.
+\]
+
+With \(a^3=2M\ell^2\), this gives
+
+\[
+M_{\rm crit}=
+\frac{81\sqrt3}{16}\ell
+\]
+
+in geometrized units.
+
+# F. Hawking temperature
+
+The Hawking temperature is
+
+\[
+T_H=\frac{|f'(r_+)|}{4\pi}.
+\]
+
+Since
+
+\[
+f'(r)=\frac{2Mr(r-2a)}{(r+a)^4},
+\]
+
+and the horizon relation gives
+
+\[
+2M=\frac{(r_++a)^3}{r_+^2},
+\]
+
+we find
+
+\[
+f'(r_+)=\frac{r_+-2a}{r_+(r_++a)}.
+\]
+
+Thus
+
+\[
+T_H=\frac{1}{4\pi}
+\left|
+\frac{r_+-2a}{r_+(r_++a)}
+\right|.
+\]
+
+At extremality,
+
+\[
+r_+=2a,
+\]
+
+so
+
+\[
+T_H=0.
+\]
+
+# G. Thermodynamics at fixed \(\ell\)
+
+Let
+
+\[
+x=\frac{r_+}{a}.
+\]
+
+The horizon equation and \(a^3=2M\ell^2\) imply
+
+\[
+a=\ell\frac{(x+1)^{3/2}}{x},
+\]
+
+and therefore
+
+\[
+M(x)=\frac{a^3}{2\ell^2}
+=
+\frac{\ell}{2}\frac{(x+1)^{9/2}}{x^3}.
+\]
+
+The temperature becomes
+
+\[
+T(x)=
+\frac{x-2}{4\pi\ell(x+1)^{5/2}}.
+\]
+
+The heat capacity at fixed \(\ell\) is
+
+\[
+C_\ell=\frac{dM}{dT}
+=
+2\pi\ell^2
+\frac{(x-2)(x+1)^7}{x^4(4-x)}.
+\]
+
+Thus \(C_\ell>0\) for \(2<x<4\), diverges at \(x=4\), and is negative for \(x>4\).
+
+# H. Photon sphere
+
+For null circular geodesics in a static spherical metric,
+
+\[
+r f'(r)-2f(r)=0.
+\]
+
+For AJ-2 this gives
+
+\[
+2(r+a)^4=6Mr^3.
+\]
+
+In dimensionless variables,
+
+\[
+2(x+1)^4=3\mu x^3.
+\]
+
+For \(a/M\ll1\), the outer solution is
+
+\[
+r_{\rm ph}=3M-4a+O(a^2/M).
+\]
+
+# I. Shadow radius
+
+The critical impact parameter is
+
+\[
+b_c=\frac{r_{\rm ph}}{\sqrt{f(r_{\rm ph})}}.
+\]
+
+Using the photon-sphere condition, this can be evaluated numerically for any \(\alpha=a/M\). For small \(a/M\),
+
+\[
+b_c=
+3\sqrt3\,M\left[
+1-\frac{a}{M}+O(a^2/M^2)
+\right].
+\]
+
+# J. ISCO
+
+For timelike geodesics,
+
+\[
+E^2=f(r)\left(1+\frac{L^2}{r^2}\right).
+\]
+
+Circular orbits satisfy \(V'_{\rm eff}=0\). The ISCO additionally satisfies \(V''_{\rm eff}=0\).
+
+For AJ-2, in dimensionless variables, the ISCO equation is
+
+\[
+x^5+(8-3\mu)x^4+(10+3\mu)x^3-8x^2-19x-8=0.
+\]
+
+The outer physical root lies outside the outer horizon. For \(a/M\ll1\),
+
+\[
+r_{\rm ISCO}=6M-9a+O(a^2/M).
+\]
+
+# K. Magnetic NED reconstruction
+
+For a magnetic monopole,
+
+\[
+F=\frac{q^2}{2r^4}.
+\]
+
+The effective NED lift is
+
+\[
+\mathcal L(F)=
+\frac{3}{2\ell^2}
+\left[
+1+\left(\frac{3}{2\ell^2F}\right)^{1/4}
+\right]^{-4}.
+\]
+
+Define
+
+\[
+F_0=\frac{3}{2\ell^2},
+\qquad
+z=\left(\frac{F}{F_0}\right)^{1/4}.
+\]
+
+Then
+
+\[
+\mathcal L(F)=\frac{F}{(1+z)^4},
+\]
+
+\[
+\mathcal L_F=\frac{1}{(1+z)^5},
+\]
+
+and
+
+\[
+\mathcal L_{FF}=
+-\frac{5z}{4F(1+z)^6}.
+\]
+
+# L. AJ-NED obstruction theorem
+
+For one-invariant magnetic NED,
+
+\[
+\Psi(F)=\mathcal L_F+2F\mathcal L_{FF}
+\]
+
+controls the angular part of the effective metric for NED perturbations. Define
+
+\[
+Y(F)=\sqrt F\,\mathcal L_F.
+\]
+
+Then
+
+\[
+Y'(F)=\frac{\Psi(F)}{2\sqrt F}.
+\]
+
+Assume:
+
+1. \(\mathcal L_F>0\);
+2. \(\mathcal L_F\to1\) as \(F\to0\);
+3. \(\mathcal L(F)\to \mathcal L_\infty<\infty\) as \(F\to\infty\);
+4. \(\Psi\ge0\) globally.
+
+Then \(Y(F)\) is nondecreasing. Since \(Y\to0\) in the Maxwell limit and \(\mathcal L_F>0\), for any \(F_1>0\) there is \(C>0\) such that
+
+\[
+Y(F)\ge C
+\quad(F\ge F_1).
+\]
+
+Thus
+
+\[
+\mathcal L_F=\frac{Y}{\sqrt F}\ge\frac{C}{\sqrt F},
+\]
+
+and
+
+\[
+\int^\infty \mathcal L_F\,dF
+\]
+
+diverges, contradicting finite saturation. Therefore \(\Psi\) must vanish or become negative at finite field strength.
+
+For AJ-2,
+
+\[
+\Psi_{\rm AJ2}=
+\frac{2-3z}{2(1+z)^6}.
+\]
+
+The degeneracy occurs at \(z=2/3\), or
+
+\[
+r_\Psi=\frac{3a}{2}.
+\]
+
+# M. Scalar perturbation potential
+
+For a massless scalar test field,
+
+\[
+\frac{d^2\Psi}{dr_*^2}
++
+\left[\omega^2-V_s(r)\right]\Psi=0,
+\]
+
+with
+
+\[
+\frac{dr_*}{dr}=\frac{1}{f(r)},
+\]
+
+and
+
+\[
+V_s(r)=
+f(r)
+\left[
+\frac{\ell_s(\ell_s+1)}{r^2}
++
+\frac{f'(r)}{r}
+\right].
+\]
+
+This is a test-field diagnostic. It does not prove full gravitational stability.
